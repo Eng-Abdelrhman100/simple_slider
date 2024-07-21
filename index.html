@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+              }
+            }
+          }
+        }
+      </script>
+      <style type="text/tailwindcss">
+        @layer utilities {
+          .content-auto {
+            content-visibility: auto;
+          }
+        }
+
+
+        @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+    .fade-in {
+      animation: fadeIn 0.5s ease-in-out;
+    }
+
+      </style>
+    <title>Document</title>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+    <div class="slider flex flex-col items-center bg-white p-4 rounded shadow-lg">
+      <img id="image" src="" alt="Image Slider" class="w-full h-auto rounded ">
+      <div class="buttons flex mt-4">
+        <button id="prev" class="px-4 py-2 bg-blue-500 text-white rounded mr-2 hover:bg-blue-700 transition">Prev</button>
+        <button id="next" class="px-4 py-2 bg-blue-500 text-white rounded ml-2 hover:bg-blue-700 transition">Next</button>
+      </div>
+    </div>
+  
+    <script src="script.js"></script>
+  </body>
+</html>
